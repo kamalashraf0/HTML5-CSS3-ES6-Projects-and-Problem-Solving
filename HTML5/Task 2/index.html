@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="" style="color: red;">Red</label> 
+    <input type="range" id="RedColor" min="0" max="255" value="0"   onchange="UpdateChange()" ><br>
+
+    <label for="" style="color: green;">Green</label>
+    <input type="range" name="" id="GreenColor" min="0" max="255" value="0" onchange="UpdateChange()"> <br>
+
+    <label for="" style="color: blue;">Blue</label>
+    <input type="range" name="" id="BlueColor" min="0" max="255" value="0" onchange="UpdateChange()"> <br>
+
+    <br>
+
+    <div id="Sentence">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab rerum fugiat velit numquam rem odit ex reiciendis! Mollitia sint, quam quis fugiat at ullam accusamus iusto maxime optio possimus perspiciatis!</div>
+
+<script>
+    let sent = document.getElementById("Sentence")
+    let redran = document.getElementById("RedColor")
+    let greenran = document.getElementById("GreenColor")
+    let blueran = document.getElementById("BlueColor")
+
+
+   function UpdateChange()
+   {
+    let redValue = redran.value;
+    let greenValue = greenran.value;
+    let blueValue = blueran.value;
+
+    sent.style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+   }
+
+
+
+
+</script>
+</body>
+</html>

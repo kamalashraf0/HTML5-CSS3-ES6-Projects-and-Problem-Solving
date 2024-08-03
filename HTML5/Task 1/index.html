@@ -1,0 +1,37 @@
+<!-- semantic tags -->
+ <!-- SEO -->
+  <!-- MOdernizer -->
+   
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      
+      <input id="UserInput" pattern="[A-Za-z]+" title="letters only" type="text" placeholder="Username" required>
+      <input type="email"  placeholder="Email" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" title="example@xxxx.com" >
+      <input type="submit" >
+      <br>
+      <!-- Remember me <input onchange="Remember()" type="checkbox">  -->
+      <button onclick="Remember()">Remember me</button>
+    </form>
+    
+    
+    <script>
+      
+      let input1 = document.getElementsByTagName("input")[0]
+      let input2 = document.getElementsByTagName("input")[1]
+
+      function Remember(){
+        window.localStorage.setItem( "Name",input1.value)
+        window.localStorage.setItem( "Email",input2.value)
+      }
+    </script>
+  </body>
+  </html>
+
+
+  

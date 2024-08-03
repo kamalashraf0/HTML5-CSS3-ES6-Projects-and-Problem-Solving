@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #87CEEB; 
+}
+
+#imgs_container {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+}
+
+#grass {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+}
+
+#player1 {
+    position: absolute;
+    bottom: 10px; 
+    left: -50px;
+}
+
+#player2 {
+    position: absolute;
+    bottom: 20px;
+    right: -50px;
+}
+
+#ball {
+    position: absolute;
+    bottom: 80px; 
+    left: 150px; 
+    animation: moveBall 2s ease-out 0.1s forwards; 
+    /* animation: moveBall 2s ease-out 0.1s alternate-reverse;  */
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes moveBall {
+   to
+   {
+    transform: translateX(600px);
+   }
+
+}
